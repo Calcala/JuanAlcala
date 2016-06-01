@@ -42,6 +42,10 @@ body{
     opacity: .6;
     }
 
+.transparent {
+    opacity: 0;
+    }
+
 
 /*
     MAIN MENU
