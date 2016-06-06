@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
 
 /* ANIMATIONS*/
@@ -211,7 +211,7 @@ body{
 .hoverAlbumInfo h3 {
     font-family: Roboto, sans-serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: normal;
     color: #eee;
     }
@@ -223,7 +223,26 @@ body{
     }
 
 
+/*
+        ALBUM
+                    */
 
+.albumWrap {
+    width: 840px;
+    margin: 50px auto;
+    font-size: 0;
+    }
+
+.albumWrap .photoThumb {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    }
+
+.photoThumb img{
+    width: 200px;
+    }
 
 
 

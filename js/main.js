@@ -1,8 +1,7 @@
 // Variables
-var $menuItemSquare = $('.menuItemSquare')
-
-
-
+var
+    $menuItemSquare = $('.menuItemSquare'),
+    linkLocation
 
 
 $menuItemSquare.hover(menuItemSquareOn,menuItemSquareOff)
@@ -19,5 +18,13 @@ $menuItemSquare.on("click", openMenuLink)
 
 function openMenuLink(event){
     event.preventDefault()
+
+    linkLocation = $(this).children("a").attr("href")
+
     $(this).siblings().addClass("transparent")
-    }
+
+
+    setTimeout(function(){
+         window.location = linkLocation
+    },300)
+}
