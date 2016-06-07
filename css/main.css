@@ -27,7 +27,7 @@
  */
 
 html {
-    min-height: 100%;
+    height: 100%;
     font-family: Raleway, Helvetica, Arial, sans-serif;
     }
 
@@ -36,6 +36,16 @@ body{
     height: 100%;
     overflow: hidden;
     }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.8);
+}
 
 
 .lowOpacity {
@@ -224,13 +234,18 @@ body{
 
 
 /*
-        ALBUM
+        ALBUMS
                     */
 
 .albumWrap {
-    width: 840px;
-    margin: 50px auto;
+    width: 860px;
+    height: 80%;
     font-size: 0;
+    overflow: auto;
+    position: absolute;
+    right: 80px;
+    top: 60px;
+    padding: 0 30px 30px;
     }
 
 .albumWrap .photoThumb {
