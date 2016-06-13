@@ -16,6 +16,20 @@
         }
     }
 
+@keyframes FadeIn {
+    to{
+        opacity:1
+        }
+    }
+
+@keyframes moveUp {
+
+	to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /*
  * RESET 
@@ -112,7 +126,7 @@ body{
     top: 0;
     left:0;
     opacity: .75;
-    transition: all .45s;
+    transition: all .65s;
     }
     .menuItemSquare:hover:before {
         opacity: .9;
@@ -238,25 +252,34 @@ body{
                     */
 
 .albumWrap {
-    width: 860px;
-    height: 80%;
+    width: 924px;
+    max-height: 80%;
     font-size: 0;
     overflow: auto;
     position: absolute;
-    right: 80px;
+    right: 60px;
     top: 60px;
-    padding: 0 30px 30px;
+    padding: 0 10px 10px;
     }
 
 .albumWrap .photoThumb {
-    width: 200px;
+    width: 220px;
     display: inline-block;
     vertical-align: top;
-    margin: 5px;
+    margin: 3px;
+    opacity: 0;
+    -webkit-transform: translateY(70px);
+	transform: translateY(70px);
+	-webkit-animation: moveUp 0.65s ease-out forwards;
+	animation: moveUp 0.65s ease-out forwards;
+    overflow: hidden;
     }
 
-.photoThumb img{
-    width: 200px;
+.photoThumb a, .photoThumb img{
+    outline: none;
+	border: none;
+	display: block;
+	width: 220px;
     }
 
 

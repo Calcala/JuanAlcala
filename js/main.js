@@ -1,18 +1,18 @@
 // Variables
 var
     $menuItemSquare = $('.menuItemSquare'),
+    $photoThumb = $('.photoThumb'),
     linkLocation
 
 
-$menuItemSquare.hover(menuItemSquareOn,menuItemSquareOff)
+$menuItemSquare.hover(reduceSiblingsOpacity,resetSiblingsOpacity)
 
-function menuItemSquareOn () {
+function reduceSiblingsOpacity () {
     $(this).siblings().addClass("lowOpacity")
 }
-function menuItemSquareOff () {
+function resetSiblingsOpacity () {
     $(this).siblings().removeClass("lowOpacity")
 }
-
 
 $menuItemSquare.on("click", openMenuLink)
 
@@ -22,7 +22,6 @@ function openMenuLink(event){
     linkLocation = $(this).children("a").attr("href")
 
     $(this).siblings().addClass("transparent")
-
 
     setTimeout(function(){
          window.location = linkLocation
