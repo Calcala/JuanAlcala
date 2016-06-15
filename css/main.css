@@ -251,14 +251,27 @@ body{
         ALBUMS
                     */
 
+.sideMenu{
+    width:300px;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    //background-color: black;
+    display: inline-block;
+    border-right: 2px solid #555
+    }
+
 .albumWrap {
     width: 924px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    margin-left: 320px;
     max-height: 80%;
     font-size: 0;
     overflow: auto;
-    position: absolute;
-    right: 60px;
-    top: 60px;
     padding: 0 10px 10px;
     }
 
