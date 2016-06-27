@@ -39,6 +39,8 @@
     }
 }
 
+
+
 /*
  * RESET 
  */
@@ -47,6 +49,9 @@
 /*
  * } RESET 
  */
+
+
+
 
 
 /* GENERAL */
@@ -61,6 +66,7 @@ body{
     height: 100%;
     overflow: hidden;
     }
+
 
 /*
  * Custom scrollbars. Only will appear on divs, the body    * doesn't allow overflow
@@ -108,6 +114,9 @@ body{
     .goTopButton:hover{
         opacity: .8;
         }
+
+
+
 
 /*
     MAIN MENU
@@ -285,13 +294,14 @@ body{
     }
 
 
+
+
 /*
 
     SIDE MENU
                 */
-
 .sideMenu{
-    width:300px;
+    width:270px;
     height: 90%;
     box-sizing: border-box;
     position: absolute;
@@ -308,13 +318,13 @@ body{
     }
 
 .sm-HeadLabel {
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 300;
+    font-size: 25px;
     margin-bottom: 10px;
     }
 
 .sm-current {
-    font-size: 25px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 50px;
@@ -326,24 +336,30 @@ body{
 .sideMenu .fa{
     margin-right: 10px;
     text-align: right;
+    font-size: 12px;
     }
 
-.sideMenu .sm-item {
-    margin: 40px 0 30px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all .4s;
+.sideMenu .sm-item{
+    margin: 40px 0 30px 0;
     }
-    .sideMenu .sm-item:hover {
+
+.sm-item a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    transition: all .4s;
+    color: white;
+    }
+    .sm-item a:hover {
         color:#96DADD;
         }
+
+
 
 
 /*
         ALBUMS
                     */
-
-
 
 .albumWrap {
     width: 70%;
@@ -351,7 +367,7 @@ body{
     box-sizing: content-box;
     top: 50%;
     transform:translateY(-50%);
-    margin-left: 320px;
+    margin-left: 290px;
     height: 80%;
     font-size: 0;
     line-height: 0;
@@ -383,6 +399,13 @@ body{
 	width: 220px;
     }
 
+
+
+
+
+/*
+    Media Queries
+                    */
 
 @media(max-width:1050px){
     .sideMenu{
