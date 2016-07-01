@@ -22,22 +22,20 @@
     }
 
 @keyframes moveUp {
-
 	to {
         -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1;
+        }
     }
-}
 
 @keyframes moveRight {
-
 	to {
         -webkit-transform: translateX(0) translateY(-50%);
         transform:translateX(0) translateY(-50%);
         opacity: 1;
+        }
     }
-}
 
 
 
@@ -93,6 +91,10 @@ body{
     opacity: 0;
     }
 
+.rotated {
+    transform: rotate(-180deg);
+    }
+
 .goTopButton {
     width: 50px;
     height: 50px;
@@ -114,8 +116,6 @@ body{
     .goTopButton:hover{
         opacity: .8;
         }
-
-
 
 
 /*
@@ -240,12 +240,10 @@ body{
         text-align: right;
         }
 
-
 .menuItemSquare h2 span{
     font-weight: 300;
     color: #343434;
     }
-
 
 .hoverAlbumInfo {
     position: absolute;
@@ -328,9 +326,10 @@ body{
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 50px;
-
     color: #B4D2D3;
-
+    opacity: 0;
+    -webkit-animation: FadeIn 0.6s ease-out forwards;
+	animation: FadeIn 0.6s ease-out forwards;
     }
 
 .sideMenu .fa{
@@ -356,15 +355,12 @@ body{
 
 
 
-
 /*
-        ALBUMS
+        BIO
                     */
-
-.albumWrap {
-    width: 70%;
+.contentWrap {
+    width: 65%;
     position: absolute;
-    box-sizing: content-box;
     top: 50%;
     transform:translateY(-50%);
     margin-left: 290px;
@@ -374,10 +370,58 @@ body{
     text-align: center;
     }
 
+.contentWrap h2{
+    font-size: 40px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 45px;
+    color: #B4D2D3;
+    padding: 0 20px;
+    }
+
+.contentWrap h3{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 45px;
+    margin-bottom: 40px;
+    color: #ddd;
+    padding: 0 20px;
+    }
+
+.contentWrap p{
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 40px;
+    color: #eee;
+    padding: 0 20px;
+    }
+
+.scrollDiv{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0;
+	-webkit-animation: FadeIn 0.8s ease-out forwards;
+	animation: FadeIn 0.8s ease-out forwards;
+    }
+
+.scrollDiv img{
+    width:80%;
+    margin:40px 0;
+    }
+
+
+
+/*
+        ALBUMS
+                    */
+
 .albumContent {
     width: 100%;
     height: 100%;
-     overflow: auto;
+    overflow: auto;
     }
 
 .albumContent .photoThumb {
@@ -401,12 +445,11 @@ body{
 
 
 
-
-
 /*
     Media Queries
                     */
 
+/* Tablet, phablets and phones in landscape mode */
 @media(max-width:1050px){
     .sideMenu{
         width:100%;
@@ -419,11 +462,28 @@ body{
         opacity: 1;
         transform: none;
         }
-        .sideMenu ul {
+        .sideMenu .sm-header{
+            float: left;
+            }
+
+        .sideMenu .fa{
             display: none;
             }
 
-    .albumWrap {
+        .sideMenu ul{
+            float:right;
+            padding-left: 20px;
+            }
+
+        .sideMenu .sm-item{
+            margin: 0;
+            display: inline-block;
+            padding: 10px 20px;
+            }
+
+
+
+    .contentWrap {
         width: 100%;
         height: 70%;
         position: static;
@@ -431,7 +491,7 @@ body{
         display: inline-block;
         max-height: 80%;
         font-size: 0;
-        overflow: auto;
+        overflow-y: auto;
         transform: none;
         margin: 0;
         text-align: center;
@@ -445,18 +505,72 @@ body{
         }
     }
 
-@media(max-width:520px){
-    .albumWrap {
+
+/* Phones*/
+@media(max-width:580px){
+
+    /* The menu will be hidden */
+    .sideMenu{
+        padding: 50px 0 0 0;
+        }
+
+    .sideMenu .sm-header{
+        padding: 0 40px;
+        position: relative;
+        float: none;
+        }
+
+    .sm-header .showMenuButton{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        display: block;
+        top: 0;
+        right:20px;
+        z-index: 999;
+        background-image: url(ui-img/chevron-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+        cursor: pointer;
+        transition: all .5s ease;
+        }
+
+    .sideMenu ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #555;
+        display: none; /* hidden by default */
+        }
+
+    .sideMenu .sm-item{
+        margin: 0;
+        width: 100%;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 10px 0 ;
+        }
+
+    .sideMenu a{
+        width: 100%;
+        height: 30px;
+        }
+
+
+    .contentWrap {
         width: 100%;
         box-sizing: border-box;
         }
 
-    .albumWrap ul {
+    .contentWrap ul {
         width:100%;
         display: auto;
         }
 
-    .albumWrap .photoThumb {
+    .contentWrap .photoThumb {
         width: 95%;
         display: block;
         vertical-align: top;
