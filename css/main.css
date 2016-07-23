@@ -67,7 +67,8 @@ body{
 
 
 /*
- * Custom scrollbars. Only will appear on divs, the body    * doesn't allow overflow
+ * Custom scrollbars. Only will appear on divs, the body
+ * doesn't allow overflow
  */
 
 ::-webkit-scrollbar {
@@ -112,6 +113,7 @@ body{
     font-size: 15px;
     line-height: 50px;
     text-align: center;
+    display: none;
     }
     .goTopButton:hover{
         opacity: .8;
@@ -293,7 +295,6 @@ body{
 
 
 
-
 /*
 
     SIDE MENU
@@ -336,6 +337,11 @@ body{
     margin-right: 10px;
     text-align: right;
     font-size: 12px;
+    }
+
+.sideMenu ul {
+    display: block;
+    opacity: 1;
     }
 
 .sideMenu .sm-item{
@@ -441,7 +447,63 @@ body{
 	border: none;
 	display: block;
 	width: 220px;
+    transition: all .4s;
     }
+
+
+
+
+
+/*
+ * Modal Gallery view
+ */
+
+.veil {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 9999;
+    }
+
+.dialog{
+    background-color: #fff;
+    width: 50%;
+    max-width: 600px;
+    padding: 80px 60px 60px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+    }
+.dialog img{
+    width: 100%
+    }
+
+.btnCloseAlert {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    background-image: url(ui-img/close.svg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    transition: all .3s;
+    cursor: pointer;
+    }
+    .btnCloseAlert:hover{
+        transform: rotate(90deg)
+                   scale(1.1);
+        }
 
 
 
@@ -473,6 +535,8 @@ body{
         .sideMenu ul{
             float:right;
             padding-left: 20px;
+            display: block;
+            opacity: 1;
             }
 
         .sideMenu .sm-item{
