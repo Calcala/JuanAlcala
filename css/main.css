@@ -470,9 +470,9 @@ body{
 
 .dialog{
     background-color: #fff;
-    width: 50%;
+    width: 40%;
     max-width: 600px;
-    padding: 80px 60px 60px;
+    padding: 60px 60px;
     position: absolute;
     top:50%;
     left: 50%;
@@ -485,26 +485,57 @@ body{
     width: 100%
     }
 
-.btnCloseAlert {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 40px;
-    background-image: url(ui-img/close.svg);
+.btnNextPhoto{
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+    background-image: url(ui-img/right-arrow-black.png);
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 60%;
     background-position: center;
     transition: all .3s;
     cursor: pointer;
     }
-    .btnCloseAlert:hover{
-        transform: rotate(90deg)
-                   scale(1.1);
+    .btnNextPhoto:hover{
+        transform: scale(1.1);
         }
 
+.btnPrevPhoto{
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    background-image: url(ui-img/left-arrow-black.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    transition: all .3s;
+    cursor: pointer;
+    }
+    .btnPrevPhoto:hover{
+        transform: scale(1.1);
+        }
+
+
+.btnClose{
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url(ui-img/close-black.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    transition: all .3s;
+    cursor: pointer;
+    }
+    .btnClose:hover{
+        transform: rotate(90deg);
+        }
 
 
 /*
