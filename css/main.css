@@ -316,10 +316,13 @@ body{
 	animation: moveRight 0.6s ease-out forwards;
     }
 
-.sm-HeadLabel {
+.sm-HeadLabel a{
     font-weight: 300;
     font-size: 25px;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
     }
 
 .sm-current {

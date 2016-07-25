@@ -33,13 +33,16 @@ function init (){
 
 function openGalleryView(event){
     event.preventDefault()
-    currentPhoto = $images.index($(this))
 
-    $alertCust = $('<div class="veil"><div class="dialog"><img src="'+photoList[currentPhoto]+'"><div class="btnNextPhoto"></div><div class="btnPrevPhoto"></div><div class="btnClose"></div></div></div>').fadeIn()
+    if($(window).innerWidth() > 580){
+        currentPhoto = $images.index($(this))
 
-    $alertCust.appendTo($body)
+        $alertCust = $('<div class="veil"><div class="dialog"><img src="'+photoList[currentPhoto]+'"><div class="btnNextPhoto"></div><div class="btnPrevPhoto"></div><div class="btnClose"></div></div></div>').fadeIn()
 
-    checkVisibleButtons ()
+        $alertCust.appendTo($body)
+
+        checkVisibleButtons ()
+    }
 
 }
 

@@ -53,15 +53,19 @@ function goTop(){
 }
 
 function openMenuLink(event){
-    event.preventDefault()
+    if($(this).children("a").attr("target") == null){
+        event.preventDefault()
 
-    linkLocation = $(this).children("a").attr("href")
+        linkLocation = $(this).children("a").attr("href")
 
-    $(this).siblings().addClass("transparent")
+        $(this).siblings().addClass("transparent")
 
-    setTimeout(function(){
-         window.location = linkLocation
-    },300)
+        setTimeout(function(){
+            window.location = linkLocation
+        },300)
+    }
+
+
 }
 
 
@@ -82,15 +86,17 @@ function makeMenuVisible(){
 function navigateTo(){
 
     if($showMenuButton.hasClass("rotated")){
-        event.preventDefault()
-        linkLocation = $(this).children("a").attr("href")
+        if($(this).children("a").attr("target") == null){
+            event.preventDefault()
+            linkLocation = $(this).children("a").attr("href")
 
-        $showMenuButton.stop().toggleClass("rotated")
-        $menu.stop().slideToggle(300, function(){
-            setTimeout(function(){
-                 window.location = linkLocation
-            },100)
-        })
+            $showMenuButton.stop().toggleClass("rotated")
+            $menu.stop().slideToggle(300, function(){
+                setTimeout(function(){
+                     window.location = linkLocation
+                },100)
+            })
+        }
     }
 
 }
