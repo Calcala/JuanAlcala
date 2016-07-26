@@ -315,14 +315,15 @@ body{
     -webkit-animation: moveRight 0.6s ease-out forwards;
 	animation: moveRight 0.6s ease-out forwards;
     }
-
-.sm-HeadLabel a{
+.sm-HeadLabel{
+    margin-bottom: 10px;
     font-weight: 300;
     font-size: 25px;
-    margin-bottom: 10px;
+    cursor: pointer;
+    }
+.sm-HeadLabel a{
     text-decoration: none;
     color: #eee;
-    cursor: pointer;
     }
 
 .sm-current {
